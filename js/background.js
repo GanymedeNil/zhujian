@@ -53,14 +53,14 @@ chrome.runtime.onMessage.addListener(
 );
 
 chrome.contextMenus.create({
-  title: "清除广告",
+  title: chrome.i18n.getMessage("extRemoveAD"),
   onclick: function(e,tab){
     chrome.tabs.sendMessage(tab.id, {type: 'removeAD'});
   }
 });
 
 chrome.contextMenus.create({
-  title: "选择内容",
+  title: chrome.i18n.getMessage("extSelect"),
   onclick: function(e,tab){
     chrome.tabs.sendMessage(tab.id, {type: 'select'});
   }
@@ -70,13 +70,13 @@ chrome.contextMenus.create({
   contexts: ['all']
 });
 chrome.contextMenus.create({
-  title: "导出到markdown（base64图片）",
+  title: chrome.i18n.getMessage("extSaveMarkdownBase64"),
   onclick: function(e,tab){
     chrome.tabs.sendMessage(tab.id, {type: 'saveMarkdown',imageType:'base64',title:tab.title,url:tab.url});
   }
 });
 chrome.contextMenus.create({
-  title: "导出到markdown（源图片地址）",
+  title: chrome.i18n.getMessage("extSaveMarkdownImage"),
   onclick: function(e,tab){
     chrome.tabs.sendMessage(tab.id, {type: 'saveMarkdown',imageType:'source',title:tab.title,url:tab.url});
   }
@@ -86,7 +86,7 @@ chrome.contextMenus.create({
   contexts: ['all']
 });
 chrome.contextMenus.create({
-  title: "导出到图片",
+  title: chrome.i18n.getMessage("extSaveImage"),
   onclick: function(e,tab){
     console.log(tab)
     chrome.tabs.sendMessage(tab.id, {type: 'saveImage',title:tab.title});

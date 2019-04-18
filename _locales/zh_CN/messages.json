@@ -1,0 +1,44 @@
+{
+  "extName": {
+    "message": "竹剪"
+  },
+  "extDescription": {
+    "message": "一个简单的网页转markdown工具"
+  },
+  "extRemoveAD": {
+    "message": "清除广告"
+  },
+  "extSelect": {
+    "message": "选择内容"
+  },
+  "extSaveMarkdownBase64": {
+    "message": "导出到markdown（base64图片）"
+  },
+  "extSaveMarkdownImage": {
+    "message": "导出到markdown（源图片地址）"
+  },
+  "extSaveImage": {
+    "message": "导出到图片"
+  },
+  "extMsgSelect": {
+    "message": "已启动选取正文模式，请移动鼠标进行选择，支持 ESC 退出。"
+  },
+  "extMsgRemoveAD": {
+    "message": "已启动移除广告模式，请移动鼠标进行选择，支持 ESC 退出。"
+  },
+  "extMsgSelectNoOut": {
+    "message": "内容保存成功，请选则导出格式"
+  },
+  "extMsgNoSelect": {
+    "message": "未选择内容，请先选择内容"
+  },
+  "extMsgOutMarkdown": {
+    "message": "正在导出markdown…"
+  },
+  "extMsgOutImage": {
+    "message": "正在导出图片…"
+  },
+  "extMsgOutErr": {
+    "message": "保存错误,可能是网页内容过多导致，请直接保存为markdown"
+  }
+}

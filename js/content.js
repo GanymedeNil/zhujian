@@ -11,10 +11,10 @@ function boundHandleRequest(data) {
   if(clickType === 'select' || clickType === 'removeAD'){
 
     if (clickType === 'select') {
-      new Notify().Render( "已启动选取正文模式，请移动鼠标进行选择，支持 ESC 退出。" );
+      new Notify().Render( chrome.i18n.getMessage("extMsgSelect") );
     }
     if (clickType === 'removeAD') {
-      new Notify().Render( "已启动移除广告模式，请移动鼠标进行选择，支持 ESC 退出。" );
+      new Notify().Render( chrome.i18n.getMessage("extMsgRemoveAD") );
     }
     listenerEvent()
 }
@@ -66,7 +66,7 @@ function inspectorOnClick(e) {
   selectedNode = e
   if(clickType ==='select'){
     saveNode = e
-    new Notify().Render( "内容保存成功，请选则导出格式" );
+    new Notify().Render( chrome.i18n.getMessage("extMsgSelectNoOut"));
     removeEvent(false)
   }
   if (clickType === 'removeAD') {
@@ -77,10 +77,10 @@ function inspectorOnClick(e) {
 
 function saveMarkdown(imageType,datas){
   if(saveNode===null){
-    new Notify().Render( "未选择内容，请先选择内容" );
+    new Notify().Render( chrome.i18n.getMessage("extMsgNoSelect") );
     return
   }
-  new Notify().Render( "正在导出markdown…" );
+  new Notify().Render( chrome.i18n.getMessage("extMsgOutMarkdown")  );
   var turndownService = new TurndownService()
     var markdown = turndownService.turndown(saveNode.srcElement)
     if(imageType==='source'){
@@ -114,7 +114,7 @@ function markdownSave(markdown,datas){
 }
 
 function saveImage(title){
-  new Notify().Render( "正在导出图片…" );
+  new Notify().Render( chrome.i18n.getMessage("extMsgOutImage") );
   selectedNode.target.style.outline = '';
   saveNode.srcElement.style.padding="20px";
    // 设置选中节点背景为白色
@@ -136,7 +136,7 @@ function saveImage(title){
       FileSaver.saveAs(blob, title+'.png');
       removeEvent()
     }).catch(error =>{
-      new Notify().Render( "保存错误,可能是网页内容过多导致，请直接保存为markdown" );
+      new Notify().Render( chrome.i18n.getMessage("extMsgOutErr") );
       console.error('oops, something went wrong!', error);
     });
 }

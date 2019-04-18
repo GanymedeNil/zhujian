@@ -1,0 +1,44 @@
+{
+  "extName": {
+    "message": "ZHUJIAN"
+  },
+  "extDescription": {
+    "message": "A simple web page to markdown tool"
+  },
+  "extRemoveAD": {
+    "message": "Clear ads"
+  },
+  "extSelect": {
+    "message": "Select content"
+  },
+  "extSaveMarkdownBase64": {
+    "message": "Export to markdown (base64 image)"
+  },
+  "extSaveMarkdownImage": {
+    "message": "Export to markdown (source image address)"
+  },
+  "extSaveImage": {
+    "message": "Export to image"
+  },
+  "extMsgSelect": {
+    "message": "The selected text mode has been activated. Please move the mouse to select and support ESC to exit."
+  },
+  "extMsgRemoveAD": {
+    "message": "The removal ad mode has been activated. Please move the mouse to select and support ESC to exit."
+  },
+  "extMsgSelectNoOut": {
+    "message": "The content is saved successfully. Please select the export format."
+  },
+  "extMsgNoSelect": {
+    "message": "No content selected, please select content first."
+  },
+  "extMsgOutMarkdown": {
+    "message": "Exporting markdown..."
+  },
+  "extMsgOutImage": {
+    "message": "Exporting image..."
+  },
+  "extMsgOutErr": {
+    "message": "Save the error, it may be caused by too much content on the webpage, please save it directly as markdown."
+  }
+}
